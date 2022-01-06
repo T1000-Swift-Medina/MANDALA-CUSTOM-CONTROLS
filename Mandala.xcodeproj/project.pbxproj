@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		CFE6D80A2787A442000AC66C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8092787A442000AC66C /* AppDelegate.swift */; };
 		CFE6D80C2787A442000AC66C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D80B2787A442000AC66C /* SceneDelegate.swift */; };
-		CFE6D80E2787A442000AC66C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D80D2787A442000AC66C /* ViewController.swift */; };
+		CFE6D80E2787A442000AC66C /* MoodSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */; };
 		CFE6D8112787A442000AC66C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE6D80F2787A442000AC66C /* Main.storyboard */; };
 		CFE6D8132787A44A000AC66C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE6D8122787A44A000AC66C /* Assets.xcassets */; };
 		CFE6D8162787A44A000AC66C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE6D8142787A44A000AC66C /* LaunchScreen.storyboard */; };
+		CFE6D81E2787A46A000AC66C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D81D2787A46A000AC66C /* Mood.swift */; };
+		CFE6D8202787A47C000AC66C /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D81F2787A47C000AC66C /* MoodEntry.swift */; };
+		CFE6D8232787A4DF000AC66C /* UIColor+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8222787A4DF000AC66C /* UIColor+Mandala.swift */; };
+		CFE6D8262787A522000AC66C /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8252787A522000AC66C /* UIImage+Mandala.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CFE6D8062787A442000AC66C /* Mandala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE6D8092787A442000AC66C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE6D80B2787A442000AC66C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFE6D80D2787A442000AC66C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionVC.swift; sourceTree = "<group>"; };
 		CFE6D8102787A442000AC66C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFE6D8122787A44A000AC66C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFE6D8152787A44A000AC66C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFE6D8172787A44A000AC66C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE6D81D2787A46A000AC66C /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		CFE6D81F2787A47C000AC66C /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		CFE6D8222787A4DF000AC66C /* UIColor+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Mandala.swift"; sourceTree = "<group>"; };
+		CFE6D8252787A522000AC66C /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		CFE6D8082787A442000AC66C /* Mandala */ = {
 			isa = PBXGroup;
 			children = (
-				CFE6D8092787A442000AC66C /* AppDelegate.swift */,
-				CFE6D80B2787A442000AC66C /* SceneDelegate.swift */,
-				CFE6D80D2787A442000AC66C /* ViewController.swift */,
-				CFE6D80F2787A442000AC66C /* Main.storyboard */,
+				CFE6D8212787A487000AC66C /* Model */,
+				CFE6D8292787A5CB000AC66C /* View */,
+				CFE6D8272787A5A3000AC66C /* Controller */,
+				CFE6D8242787A4E4000AC66C /* Extentions */,
+				CFE6D8282787A5B1000AC66C /* Delegates */,
 				CFE6D8122787A44A000AC66C /* Assets.xcassets */,
-				CFE6D8142787A44A000AC66C /* LaunchScreen.storyboard */,
 				CFE6D8172787A44A000AC66C /* Info.plist */,
 			);
 			path = Mandala;
+			sourceTree = "<group>";
+		};
+		CFE6D8212787A487000AC66C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6D81D2787A46A000AC66C /* Mood.swift */,
+				CFE6D81F2787A47C000AC66C /* MoodEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE6D8242787A4E4000AC66C /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6D8222787A4DF000AC66C /* UIColor+Mandala.swift */,
+				CFE6D8252787A522000AC66C /* UIImage+Mandala.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CFE6D8272787A5A3000AC66C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE6D8282787A5B1000AC66C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6D8092787A442000AC66C /* AppDelegate.swift */,
+				CFE6D80B2787A442000AC66C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CFE6D8292787A5CB000AC66C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE6D80F2787A442000AC66C /* Main.storyboard */,
+				CFE6D8142787A44A000AC66C /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE6D80E2787A442000AC66C /* ViewController.swift in Sources */,
+				CFE6D81E2787A46A000AC66C /* Mood.swift in Sources */,
+				CFE6D80E2787A442000AC66C /* MoodSelectionVC.swift in Sources */,
+				CFE6D8202787A47C000AC66C /* MoodEntry.swift in Sources */,
 				CFE6D80A2787A442000AC66C /* AppDelegate.swift in Sources */,
+				CFE6D8232787A4DF000AC66C /* UIColor+Mandala.swift in Sources */,
+				CFE6D8262787A522000AC66C /* UIImage+Mandala.swift in Sources */,
 				CFE6D80C2787A442000AC66C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
