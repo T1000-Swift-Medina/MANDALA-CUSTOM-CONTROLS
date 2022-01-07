@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF001F2B2787BDD500D217EA /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF001F2A2787BDD500D217EA /* ImageSelector.swift */; };
 		CFE6D80A2787A442000AC66C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8092787A442000AC66C /* AppDelegate.swift */; };
 		CFE6D80C2787A442000AC66C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D80B2787A442000AC66C /* SceneDelegate.swift */; };
 		CFE6D80E2787A442000AC66C /* MoodSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF001F2A2787BDD500D217EA /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageSelector.swift; path = Mandala/ImageSelector.swift; sourceTree = SOURCE_ROOT; };
 		CFE6D8062787A442000AC66C /* Mandala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE6D8092787A442000AC66C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE6D80B2787A442000AC66C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		CFE6D8272787A5A3000AC66C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF001F2A2787BDD500D217EA /* ImageSelector.swift */,
 				CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */,
 				CFE6D82A2787AA15000AC66C /* MoodListVC.swift */,
 			);
@@ -204,6 +207,7 @@
 				CFE6D8232787A4DF000AC66C /* UIColor+Mandala.swift in Sources */,
 				CFE6D8262787A522000AC66C /* UIImage+Mandala.swift in Sources */,
 				CFE6D80C2787A442000AC66C /* SceneDelegate.swift in Sources */,
+				CF001F2B2787BDD500D217EA /* ImageSelector.swift in Sources */,
 				CFE6D82B2787AA15000AC66C /* MoodListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.t1000.team.Mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -393,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.t1000.team.Mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
