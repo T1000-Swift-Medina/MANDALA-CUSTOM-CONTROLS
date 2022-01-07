@@ -12,6 +12,8 @@ class MoodSelectionVC: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var addMoodButton: UIButton!
     
+    var moodsConfigurable: MoodsConfigurable!
+    
     var currentMood: Mood? {
         didSet {
             guard let currentMood = currentMood else {
@@ -23,6 +25,7 @@ class MoodSelectionVC: UIViewController {
             addMoodButton.backgroundColor = currentMood.color
         }
     }
+    
     @objc func moodSelectionChanged(_ sender: UIButton){
         guard let selectedIndex = moodButtons.firstIndex(of: sender) else {
             preconditionFailure("Unable to find the tapped button in the buttons array")
@@ -46,6 +49,7 @@ class MoodSelectionVC: UIViewController {
         
         }
     }
+    
     var  moodButtons: [UIButton] = [] {
         didSet {
             oldValue.forEach({$0.removeFromSuperview()})
@@ -61,15 +65,30 @@ class MoodSelectionVC: UIViewController {
     }
     
 
-    /*
+    @IBAction func addMoodTapped(_ sender: UIButton){
+        guard let currentMood = currentMood else {
+            return
+        }
+        let newMoodEntry = MoodEntry(mood: currentMood, timestamp: Date())
+        
+        moodsConfigurable.add(newMoodEntry)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "embedContainerViewController":
+            guard let moodsConfigurable = segue.destination as? MoodsConfigurable else {
+                preconditionFailure("View controller expected to conform to MoodsConfigurable protocol")
+            }
+            self.moodsConfigurable = moodsConfigurable
+            segue.destination.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 160, right: 0)
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
     }
-    */
+    
 
 }
 

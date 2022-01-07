@@ -17,6 +17,8 @@
 		CFE6D8202787A47C000AC66C /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D81F2787A47C000AC66C /* MoodEntry.swift */; };
 		CFE6D8232787A4DF000AC66C /* UIColor+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8222787A4DF000AC66C /* UIColor+Mandala.swift */; };
 		CFE6D8262787A522000AC66C /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D8252787A522000AC66C /* UIImage+Mandala.swift */; };
+		CFE6D82B2787AA15000AC66C /* MoodListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D82A2787AA15000AC66C /* MoodListVC.swift */; };
+		CFE6D82D2787AC40000AC66C /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6D82C2787AC40000AC66C /* MoodsConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CFE6D81F2787A47C000AC66C /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		CFE6D8222787A4DF000AC66C /* UIColor+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Mandala.swift"; sourceTree = "<group>"; };
 		CFE6D8252787A522000AC66C /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
+		CFE6D82A2787AA15000AC66C /* MoodListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListVC.swift; sourceTree = "<group>"; };
+		CFE6D82C2787AC40000AC66C /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE6D80D2787A442000AC66C /* MoodSelectionVC.swift */,
+				CFE6D82A2787AA15000AC66C /* MoodListVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 		CFE6D8282787A5B1000AC66C /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				CFE6D82C2787AC40000AC66C /* MoodsConfigurable.swift */,
 				CFE6D8092787A442000AC66C /* AppDelegate.swift */,
 				CFE6D80B2787A442000AC66C /* SceneDelegate.swift */,
 			);
@@ -194,9 +200,11 @@
 				CFE6D80E2787A442000AC66C /* MoodSelectionVC.swift in Sources */,
 				CFE6D8202787A47C000AC66C /* MoodEntry.swift in Sources */,
 				CFE6D80A2787A442000AC66C /* AppDelegate.swift in Sources */,
+				CFE6D82D2787AC40000AC66C /* MoodsConfigurable.swift in Sources */,
 				CFE6D8232787A4DF000AC66C /* UIColor+Mandala.swift in Sources */,
 				CFE6D8262787A522000AC66C /* UIImage+Mandala.swift in Sources */,
 				CFE6D80C2787A442000AC66C /* SceneDelegate.swift in Sources */,
+				CFE6D82B2787AA15000AC66C /* MoodListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.t1000.team.Mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -385,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.t1000.team.Mandala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
