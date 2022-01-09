@@ -59,6 +59,7 @@ class ImageSelector: UIControl {
         }
         let imageButton = imageButtons[selectedIndex]
         highlightViewXConstraint = highlightView.centerXAnchor.constraint(equalTo: imageButton.centerXAnchor)
+        imageButtons[oldValue].isHighlighted = true
         }
     }
     private var imageButtons: [UIButton] = [] {
@@ -74,12 +75,20 @@ class ImageSelector: UIControl {
                 
                 imageButton.setImage(image, for: .normal)
                 imageButton.imageView?.contentMode = .scaleAspectFit
-                imageButton.adjustsImageWhenHighlighted = false
+                // As per iOS 15
+                // UIButton().adjustsImageWhenHighlighted is deprecated we will adjust button highlights by ourselves
+                if #available(iOS 15, *) {
+                    imageButton.isHighlighted = true
+                } else {
+                    imageButton.adjustsImageWhenHighlighted = false
+                    imageButton.isHighlighted = true
+                }
                 imageButton.addTarget(self,
                                       action: #selector(imageButtonTapped(_:)), for: .touchUpInside)
                 return imageButton
             })
             selectedIndex = 0
+            imageButtons[selectedIndex].isHighlighted = false
         }
     }
     private let highlightView: UIView = {

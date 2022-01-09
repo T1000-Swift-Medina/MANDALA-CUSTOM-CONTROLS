@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,12 +47,22 @@
                                     <action selector="moodSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PKI-HS-6nY"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERSION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-wW-z5y">
+                                <rect key="frame" x="20" y="790" width="350" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="J87-PS-ZIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nx6-Kv-IEK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CK5-zT-814"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nx6-Kv-IEK" secondAttribute="bottom" constant="40" id="DyL-wE-qNQ"/>
+                            <constraint firstItem="3xh-wW-z5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DBI-nq-v1r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3xh-wW-z5y" secondAttribute="trailing" constant="20" id="GJf-1X-OOX"/>
                             <constraint firstItem="inW-Be-Gaq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gm7-91-ZaF"/>
                             <constraint firstItem="bRg-oW-kIv" firstAttribute="top" secondItem="inW-Be-Gaq" secondAttribute="bottom" constant="8" id="KDo-SC-Z9c"/>
                             <constraint firstItem="inW-Be-Gaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MCO-B9-VPZ"/>
@@ -59,11 +70,14 @@
                             <constraint firstItem="inW-Be-Gaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aGK-R4-cMs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nx6-Kv-IEK" secondAttribute="trailing" constant="20" id="jcA-TW-iHB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRg-oW-kIv" secondAttribute="trailing" constant="20" id="mW5-6F-XzU"/>
+                            <constraint firstItem="3xh-wW-z5y" firstAttribute="top" secondItem="nx6-Kv-IEK" secondAttribute="bottom" constant="20" id="mlr-xq-miQ"/>
+                            <constraint firstItem="3xh-wW-z5y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o2F-Kc-1HN"/>
                             <constraint firstItem="bRg-oW-kIv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pK1-PX-1Ho"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addMoodButton" destination="nx6-Kv-IEK" id="5Qn-ts-B7B"/>
+                        <outlet property="appVersion" destination="3xh-wW-z5y" id="4Px-Vh-Pur"/>
                         <outlet property="moodSelector" destination="bRg-oW-kIv" id="cwR-r2-Gfv"/>
                     </connections>
                 </viewController>

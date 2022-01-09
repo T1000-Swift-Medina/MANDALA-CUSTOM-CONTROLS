@@ -11,6 +11,7 @@ class MoodSelectionVC: UIViewController {
     
     @IBOutlet var moodSelector: ImageSelector!
     @IBOutlet var addMoodButton: UIButton!
+    @IBOutlet var appVersion: UILabel!
     
     var moodsConfigurable: MoodsConfigurable!
     
@@ -21,7 +22,7 @@ class MoodSelectionVC: UIViewController {
                 addMoodButton.backgroundColor = nil
                 return
             }
-            addMoodButton.setTitle("I'm  \(currentMood.name)", for: .normal)
+            addMoodButton.setTitle("I'm \(currentMood.name)", for: .normal)
             addMoodButton.backgroundColor = currentMood.color
         }
     }
@@ -30,7 +31,7 @@ class MoodSelectionVC: UIViewController {
         let selectedIndex = sender.selectedIndex
         
         currentMood = moods[selectedIndex]
-        print("Current Mood: \(currentMood?.name)")
+//        print("Current Mood: \(currentMood?.name)")
 
     }
     
@@ -48,6 +49,9 @@ class MoodSelectionVC: UIViewController {
         super.viewDidLoad()
         moods = [.normal, .happy, .sad, .angry, .fun]
         addMoodButton.layer.cornerRadius = addMoodButton.bounds.height / 2
+        if let version = Bundle.main.version, let appDisplayName = Bundle.main.displayName {
+            appVersion.text = "\(appDisplayName) v\(version)"
+        }
         // Do any additional setup after loading the view.
     }
     
