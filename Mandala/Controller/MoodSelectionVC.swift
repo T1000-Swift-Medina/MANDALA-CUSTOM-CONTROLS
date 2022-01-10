@@ -27,14 +27,6 @@ class MoodSelectionVC: UIViewController {
         }
     }
     
-    @IBAction private func moodSelectionChanged(_ sender: ImageSelector){
-        let selectedIndex = sender.selectedIndex
-        
-        currentMood = moods[selectedIndex]
-//        print("Current Mood: \(currentMood?.name)")
-
-    }
-    
     var moods: [Mood] = [] {
         didSet {
             currentMood = moods.first
@@ -43,7 +35,7 @@ class MoodSelectionVC: UIViewController {
         }
     }
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +47,14 @@ class MoodSelectionVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction private func moodSelectionChanged(_ sender: ImageSelector){
+        let selectedIndex = sender.selectedIndex
+        
+        currentMood = moods[selectedIndex]
+        //        print("Current Mood: \(currentMood?.name)")
+        
+    }
+    
     @IBAction func addMoodTapped(_ sender: UIButton){
         guard let currentMood = currentMood else {
             return
@@ -65,7 +64,7 @@ class MoodSelectionVC: UIViewController {
         moodsConfigurable.add(newMoodEntry)
     }
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -80,6 +79,6 @@ class MoodSelectionVC: UIViewController {
         }
     }
     
-
+    
 }
 
